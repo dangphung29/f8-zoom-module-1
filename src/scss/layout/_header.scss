@@ -141,13 +141,13 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            width: 100%;
-            top: 50px;
-            left: 0;
+            width: 90%;
+            top: 100px;
+            left: 5%;
             background-color: $primary-color-1;
             color: #fff;
             gap: 0;
-            transition: all ease-in-out .5s;
+            transition: all ease-in-out .3s;
 
 
             a {
@@ -205,7 +205,7 @@
 
         .main-nav {
             width: 90%;
-            top: 22px;
+            top: 70px;
             left: 5%;
 
             a {
