@@ -1,0 +1,283 @@
+@use "../mixins";
+@use '../variables' as *;
+
+.top-page.about-top-page {
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 170px;
+
+    h1,
+    p {
+        max-width: 670px;
+    }
+
+    @include mixins.screen(md) {
+        padding-bottom: 40px;
+        padding-top: 50px;
+
+    }
+
+}
+
+
+
+
+.story {
+    margin-top: 150px;
+
+    .img-story {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .story-img {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 3.5%;
+            height: 38.6%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FED464;
+        }
+    }
+
+    .img-pattern {
+        position: absolute;
+        width: 20%;
+        top: 52%;
+        left: -8%;
+    }
+
+    .title {
+        color: #586863;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        margin-bottom: 18px;
+        line-height: 5.2rem;
+    }
+
+    .story-content {
+        p {
+            color: #586863;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .y-center {
+        height: 100%;
+    }
+
+    .story-1 {
+        margin-bottom: 150px;
+
+        .img-pattern {
+            width: 23%;
+            left: -10%;
+            top: 50%;
+        }
+    }
+
+
+
+
+
+    @include mixins.screen(md) {
+
+        margin-top: 50px;
+
+        h2 {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+
+
+        .story-1 {
+            margin-bottom: 50px;
+        }
+    }
+
+
+}
+
+
+
+.gallery {
+    margin-bottom: 70px;
+
+    .title {
+        color: #586863;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .desc {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1170/570;
+        object-fit: cover;
+        margin-bottom: 55px;
+    }
+
+    .dot-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .dot {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: $dark;
+        transition: all ease-in-out .2s;
+
+        &:hover {
+            background-color: $primary-color-1;
+        }
+    }
+
+
+    @include mixins.screen(md) {
+        margin-bottom: 50px;
+
+        .title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            line-height: 3.6rem !important;
+            margin-bottom: 15px !important;
+        }
+
+        .desc {
+            font-family: Manrope;
+            font-size: 1.2rem;
+            line-height: 2.1rem !important;
+            margin-bottom: 30px;
+        }
+
+
+    }
+}
+
+
+.about-countdown {
+    margin-bottom: 150px;
+
+    .container {
+        padding: 55px 0px;
+        background-color: #FED464;
+        display: flex;
+        gap: 118px;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .about-countdown-item {
+        p:first-child {
+            font-family: "Roboto Slab";
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 7rem;
+        }
+
+        p:last-child {
+            font-size: 1.6rem;
+        }
+
+    }
+
+    @include mixins.screen(lg) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+    }
+
+    @include mixins.screen(md) {
+        margin-bottom: 50px;
+
+    }
+}
+
+
+
+.video {
+    margin-bottom: 70px;
+
+
+    .title {
+        color: #586863;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .desc {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+
+
+    .video-item {
+        background-color: #000;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1170/570;
+    }
+
+
+
+    @include mixins.screen(md) {
+        margin-bottom: 50px;
+
+        .title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            line-height: 3.6rem !important;
+            margin-bottom: 15px !important;
+        }
+
+        .desc {
+            font-family: Manrope;
+            font-size: 1.2rem;
+            line-height: 2.1rem !important;
+            margin-bottom: 30px;
+        }
+
+
+    }
+}

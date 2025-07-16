@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <%- include("./partials/header.ejs") %>
+            <main>
+                <div class="contact-page">
+
+                    <div class="container">
+                        <p class="title">
+                            Contact us
+                        </p>
+                        <h1>
+                            We Are Always Ready To Hear<br>For You.
+                        </h1>
+
+                        <p class="desc">
+                            The right move at the right time saves your investment. live the dream of expanding your
+                            business.
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-6 col-lg-12">
+                                <div class="input-wrapper y-center">
+                                    <input name="name" type="text" placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="input-wrapper y-center">
+                                    <input name="comapy" type="text" placeholder="Comapy (optioanl)">
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="input-wrapper y-center">
+                                    <input name="email" type="text" placeholder="Your email">
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-12">
+                                <div class="input-wrapper y-center">
+                                    <input name="phone" type="text" placeholder="Phone number">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <div class="textarea-wrapper y-center">
+                                    <textarea placeholder="Tell us about yourself" name="yourself" id=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <a href="#!">Contact us</a>
+                        </div>
+
+
+            </main>
+            <%- include("./partials/footer.ejs") %>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

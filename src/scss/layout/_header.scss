@@ -1,0 +1,248 @@
+@use '../variables' as *;
+@use "../mixins";
+
+
+.header {
+    padding: 30px 0;
+    background-color: #F8EBC9;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0%;
+    z-index: 999;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+
+
+
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 92px;
+    }
+
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+    }
+
+    .main-nav {
+        display: flex;
+        position: relative;
+        gap: 40px;
+
+        a {
+            display: block;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            height: 100%;
+            line-height: 67px;
+        }
+    }
+
+    .main-nav>li {
+        min-height: 67px;
+        position: relative;
+    }
+
+    .main-nav>li:hover .sub-nav {
+        max-height: 1000px;
+    }
+
+    .chevron-lever-1 {
+        display: inline-block;
+        transition: all ease-in-out .3s;
+    }
+
+    .main-nav>li:hover .chevron-lever-1 {
+        transform: rotate(180deg);
+        transform-origin: 50% 53%
+    }
+
+    li.active {
+        color: $primary-color-1;
+    }
+
+    a:hover {
+        color: $primary-color-1;
+    }
+
+    li {
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    strong {
+        font-family: Manrope;
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    p {
+        line-height: 67px;
+    }
+
+    .sub-nav {
+        overflow: hidden;
+        max-height: 0px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 67px;
+        left: 0;
+        font-size: 1.6rem;
+        background-color: #fff;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        color: $gray;
+        transition: all ease-in-out .3s;
+
+        >li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 42px;
+            min-width: 185px;
+            padding-left: 12px;
+            padding-right: 12px;
+            text-align: 42px;
+
+            a {
+                line-height: 42px;
+                font-weight: 400;
+            }
+
+            &:hover {
+                color: $primary-color-1;
+            }
+        }
+    }
+
+
+    @include mixins.screen(xl) {
+        .nav-bar {
+            gap: 40px;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        height: 40px;
+
+        .main-nav {
+            max-height: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            background-color: $primary-color-1;
+            color: #fff;
+            gap: 0;
+            transition: all ease-in-out .5s;
+
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+        }
+
+        .sub-nav {
+            position: static;
+        }
+
+        li {
+            border-bottom: 1px solid #fff;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+
+        li.active {
+            color: #fff;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .menu-icon {
+            display: block;
+            font-size: 38px;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .open-menu:checked~ul {
+            max-height: 1000px;
+        }
+
+        p {
+            font-size: 1.5rem;
+
+            strong {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    @include mixins.screen(sm) {
+        height: 20px;
+
+        .main-nav {
+            width: 90%;
+            top: 22px;
+            left: 5%;
+
+            a {
+                font-size: 1rem;
+                height: 50px;
+            }
+        }
+
+        li {
+            min-height: 20px !important;
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+
+
+        ul {
+            display: none;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .menu-icon {
+            font-size: 19px;
+        }
+
+        p {
+            font-size: 1rem;
+
+            strong {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+}
